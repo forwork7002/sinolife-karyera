@@ -1,7 +1,7 @@
 # Sinolife — karyera (HR) landingi
 
 Call-markaz sotuvchisi vakansiyasi. Statik sahifa, GitHub Pages: `main` ga push = deploy.
-Jonli: https://forwork7002.github.io/sinolife-karyera/
+Jonli: https://hr.sinolife.uz/ (eski https://forwork7002.github.io/sinolife-karyera/ unga 301 bilan yo'naltiradi)
 
 > Repo PUBLIC: token, webhook, xodim ismi/telefoni, ichki maosh jadvali — bu yerga yozilmaydi.
 
@@ -19,11 +19,8 @@ Jonli: https://forwork7002.github.io/sinolife-karyera/
 
 Hodisalar har doim `window.dataLayer` ga ham yoziladi (`View`, `Contact`, `CtaTest`, `QuizStart`, `QuizComplete`, `Lang`).
 
-## hr.sinolife.uz ga ulash (tayyor, hali yoqilmagan)
-`CNAME` fayli ataylab YO'Q: u DNS'dan oldin qo'shilsa, github.io manzili ishlamay qolgan domenga yo'naltiriladi.
-1. DNS (DigitalOcean, `sinolife.uz` zonasi): `CNAME  hr  →  forwork7002.github.io.` (TTL 3600). Egasining ruxsati bilan.
-2. `dig +short hr.sinolife.uz` → `forwork7002.github.io.` qaytgach: repo ildiziga `CNAME` fayli (bitta qator `hr.sinolife.uz`) → push.
-3. GitHub → Settings → Pages: sertifikat chiqqach «Enforce HTTPS».
-4. Tekshiruv: `curl -sI https://hr.sinolife.uz/` → 200; eski manzil 301 bilan yangi domenga o'tadi.
-5. `index.html` dagi `og:image` manzilini `https://hr.sinolife.uz/img/jamoa-1280.jpg` ga almashtirish.
-Sahifadagi yo'llar nisbiy (`img/...`), shuning uchun ikkala manzilda ham ishlaydi.
+## Domen: hr.sinolife.uz (19.11.2026 dan)
+- DNS (DigitalOcean, `sinolife.uz` zonasi): `CNAME hr → forwork7002.github.io.` — egasining ruxsati bilan qo'shilgan.
+- Repo ildizidagi `CNAME` fayli (`hr.sinolife.uz`) va GitHub Pages custom domain shu manzilga; «Enforce HTTPS» yoqilgan.
+- `index.html`: `canonical`, `og:url`, `og:image` — `https://hr.sinolife.uz/`. Ichki yo'llar nisbiy (`img/...`).
+- `CNAME` faylini o'chirish yoki DNS yozuvini olib tashlash saytni buzadi — avval ikkinchisini qaytaring.
